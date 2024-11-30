@@ -6,12 +6,11 @@
 </template>
 
 <style scoped>
-
 .chat-box {
+  margin-left: 10px;
   color: red;
   display: block;
 }
-
 </style>
 
 <script setup>

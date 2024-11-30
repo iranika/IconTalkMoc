@@ -1,19 +1,32 @@
 <template>
   <q-page class="">
+    <!--
     <template v-for="s in scriptList" v-bind:key="s">
-      <ChatBox :script="s"></ChatBox>
+      <TalkLeft :script="s"></TalkLeft>
     </template>
+-->
+    <DLCardSmall :cardInfo="cardInfo"></DLCardSmall>
+
   </q-page>
 </template>
 
 <script setup>
 //
 import { ref } from "vue";
-import ChatBox from "components/ChatBox.vue"
+import TalkLeft from "src/components/TalkLeft.vue"
+import DLCardSmall from "src/components/DLCardSmall.vue";
 
 const seri = "https://momoco.iranika.info/img/charactor/seri-205.jpg";
 const siro = "https://momoco.iranika.info/img/charactor/suzusiro-241.jpg";
 const uri = "https://momoco.iranika.info/img/charactor/inoko-251.jpg";
+
+let cardInfo = {
+  "url": "https://www.dlsite.com/home/work/=/product_id/RJ151299.html",
+  "img": "https://img.dlsite.jp/resize/images2/work/doujin/RJ152000/RJ151299_img_main_240x240.jpg",
+  "circleName": "桃色CODE",
+  "値段": "880円",
+  "title": "【192khzハイレゾ】道草屋 たびらこ【古宿耳かき】"
+}
 
 let scriptList = [
   {
