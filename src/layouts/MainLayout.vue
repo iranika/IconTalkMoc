@@ -12,30 +12,29 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          Icon Talk Moc
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
     <q-drawer
       v-model="leftDrawerOpen"
-      show-if-above
       bordered
     >
       <q-list>
         <q-item-label
           header
         >
-          Essential Links
+          Links
         </q-item-label>
 
-        <EssentialLink
-          v-for="link in linksList"
-          :key="link.title"
-          v-bind="link"
-        />
+        <q-item href="https://x.com/happy_packet">
+          <q-item-section>
+            <q-item-label>X (twitter)</q-item-label>
+            <q-item-label caption>iranikaのアカウント</q-item-label>
+          </q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 
