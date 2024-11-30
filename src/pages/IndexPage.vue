@@ -6,6 +6,7 @@
     </template>
 -->
     <DLCardSmall :cardInfo="cardInfo"></DLCardSmall>
+    <!--test one-->
 
   </q-page>
 </template>
