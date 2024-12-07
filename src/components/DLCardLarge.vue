@@ -6,9 +6,10 @@
       </div>
       <div class="info-text">
         <h3><a src="{{ props.cardInfo.url }}" target="_blank">{{ props.cardInfo.title }}</a></h3>
-        <!-- FIXME:この表記でURL遷移とか読み込みってできないんですかね -->
-        <span class="circle-name">{{ props.cardInfo.circleName }}</span>
-        <span class="price">{{ props.cardInfo.値段 }}</span>
+        <div class="inner-flex">
+          <span class="circle-name">{{ props.cardInfo.circleName }}</span>
+          <span class="price">{{ props.cardInfo.値段 }}</span>
+        </div>
       </div>
     </div>
     <a src="{{ props.cardInfo.url }}" target="_blank" class="card-url">作品ページを見る</a>
@@ -28,16 +29,17 @@
 
 .info-flex {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   margin-bottom: 0.75rem;
 }
 
 .info-img {
-  width: 64px;
-  min-width: 64px;
-  height: 64px;
-  margin-right: 16px;
+  width: 100%;
+  height: 300px;
+  min-width: 100px;
+  margin: 1rem auto;
   background-color: #f00;
 }
 
@@ -80,8 +82,12 @@
   color: #fff;
   text-decoration: none;
   border: none;
+}
 
-
+.inner-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 </style>
 
