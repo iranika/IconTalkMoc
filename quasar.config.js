@@ -6,6 +6,7 @@
 
 import { defineConfig } from '#q-app/wrappers'
 import { fileURLToPath } from 'node:url';
+import Preview from "vite-plugin-vue-component-preview"
 
 export default defineConfig((ctx) => {
   return {
@@ -83,7 +84,8 @@ export default defineConfig((ctx) => {
           eslint: {
             lintCommand: 'eslint "./**/*.{js,mjs,cjs,vue}"'
           }
-        }, { server: false }]
+        }, { server: false }],
+        [Preview]
       ]
     },
 
