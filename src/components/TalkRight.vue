@@ -7,18 +7,39 @@
 
 <style scoped>
 .chat-box {
-  margin-left: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  margin: 2rem 1rem 2rem auto;
   color: red;
+  line-height: 1.75;
+}
+
+.chat-box img {
   display: block;
+  box-sizing: content-box;
+  border-radius: 100%;
+  border: solid 2px #C47E2F;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.chat-box span {
+  display: block;
+  max-width: 300px;
+  /*max-width=仮*/
+  padding: 0.75rem 1rem;
+  margin-right: 0.75rem;
+  border: solid 2px #aaaaaa;
+  border-radius: 12px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 </style>
 
 <script setup>
 const props = defineProps({
   script: {
-    icon: string,
-    text: string,
-    type: string
+    type: Object,
   },
 })
 </script>
